@@ -20,7 +20,7 @@ def get_and_save_csv():
 
 	response = requests.get( apiUrl )
 
-	with open(filename, 'wb') as fout:
+	with open(file_name, 'wb') as fout:
 		for chunk in response.iter_content(chunk_size):
 			fout.write(chunk)
 	return file_name
